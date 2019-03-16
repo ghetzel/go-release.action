@@ -7,13 +7,13 @@ LABEL "com.github.actions.icon"="cpu"
 LABEL "com.github.actions.color"="orange"
 
 LABEL "name"="Automate publishing Go build artifacts for GitHub releases through GitHub Actions"
-LABEL "version"="1.0.1"
+LABEL "version"="1.12"
 LABEL "repository"="http://github.com/ghetzel/go-release.action"
 LABEL "homepage"="http://github.com/ghetzel"
 
 LABEL "maintainer"="Gary Hetzel <its@gary.cool> (https://gary.cool)"
 
-RUN apk add --no-cache curl jq git
+RUN apk add --no-cache curl jq git make
 
 ADD entrypoint.sh /entrypoint.sh
 ADD build.sh /build.sh
